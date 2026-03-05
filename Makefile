@@ -3,6 +3,8 @@ up: docker-up
 down: docker-down
 build: docker-build
 
+run: docker-build docker-up migrate-fresh-db run-queue-listen
+
 docker-up:
 	docker compose up --detach --remove-orphans
 
