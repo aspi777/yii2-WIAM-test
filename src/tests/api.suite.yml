@@ -1,0 +1,9 @@
+actor: ApiTester
+modules:
+  enabled:
+    - Asserts
+    - REST:
+        url: /
+        depends: [Yii2]
+    - Yii2:
+        part: [email, fixtures, orm]
